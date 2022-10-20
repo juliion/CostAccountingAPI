@@ -40,4 +40,26 @@ public class CostsController : ControllerBase
     {
         return new JsonResult(Ok(_dataService.Categories));
     }
+    
+    [HttpGet]
+    public IActionResult GetRecordsByUser(int userId)
+    {
+        var records = _dataService.Records.Where(record => record.UserId == userId);
+        if (records.Count() == 0)
+        {
+            return new JsonResult(NotFound());
+        }
+        return new JsonResult(Ok(records));
+    }
+    
+    [HttpGet]
+    public IActionResult GetRecordsByUserAndCategory(int userId, int categoryId)
+    {
+        var records = _dataService.Records.Where(record => record.UserId == userId && record.CategoryId == categoryId);
+        if (records.Count() == 0)
+        {
+            return new JsonResult(NotFound());
+        }
+        return new JsonResult(Ok(records));
+    }
 }
