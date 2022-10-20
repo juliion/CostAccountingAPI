@@ -13,4 +13,25 @@ public class CostsController : ControllerBase
     {
         _dataService = dataService;
     }
+    
+    [HttpPost]
+    public IActionResult CreateUser(User user)
+    {
+        _dataService.Users.Add(user);
+        return new JsonResult(Ok(user.Id));
+    }
+    
+    [HttpPost]
+    public IActionResult CreateCategory(Category category)
+    {
+        _dataService.Categories.Add(category);
+        return new JsonResult(Ok(category.Id));
+    }
+    
+    [HttpPost]
+    public IActionResult CreateRecord(Record record)
+    {
+        _dataService.Records.Add(record);
+        return new JsonResult(Ok(record.Id));
+    }
 }
