@@ -34,4 +34,10 @@ public class CostsController : ControllerBase
         _dataService.Records.Add(record);
         return new JsonResult(Ok(record.Id));
     }
+    
+    [HttpGet]
+    public IActionResult GetCategories()
+    {
+        return new JsonResult(Ok(_dataService.Categories));
+    }
 }
