@@ -1,13 +1,16 @@
 # CostAccountingAPI
 Cost accounting REST API
+
 Deployed project: https://costaccountingapi.herokuapp.com/
 
 ## Installing .NET6.0
 
 **Windows**
+
 Download from the link:  https://dotnet.microsoft.com/en-us/download/dotnet
 
 **Linux**
+
 Add the Microsoft package signing key to the list of validated keys and add the repository:
 
  ```wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb``` 
@@ -33,25 +36,33 @@ Install the .NET runtime:
 ## Project launch
 
 Clone the repository:
+
  ```git clone https://github.com/juliion/CostAccountingAPI.git```
 
 Go to the working directory of the cloned project "CostAccountingAPI"
+
    ```cd CostAccountingAPI/CostAccountingAPI```
 
 Run the project:
+
  ```dotnet run```
 
 ## Launch Docker
 
 Go to the directory with the Dockerfile "CostAccountingAPI":
+
  ```cd CostAccountingAPI/CostAccountingAPI```
 
 Build the image from the Dockerfile:
+
  ```docker build -t <image name> .```
  
 Run docker:
+
  ```docker run --rm -it -d -p <your port>:80 <image name>```
+ 
 or
+
  ```docker-compose build```
  and
  ```docker-compose up```
@@ -62,15 +73,15 @@ or
 **POST** https://costaccountingapi.herokuapp.com/Costs/CreateUser
 ```
 {
-	"id": "number", 
-	"name": "string"
+  "id": "number", 
+  "name": "string"
 }
 ```
 
 Response
 ```
 {
-	"id": "number"
+  "id": "number"
 }
 ```
 
@@ -78,15 +89,15 @@ Response
 **POST** https://costaccountingapi.herokuapp.com/Costs/CreateCategory
 ```
 {
-	"id": "number", 
-	"name": "string"
+  "id": "number", 
+  "name": "string"
 }
 ```
 
 Response
 ```
 {
-	"id": "number"
+  "id": "number"
 }
 ```
 
@@ -105,7 +116,7 @@ Response
 Response
 ```
 {
-	"id": "number"
+  "id": "number"
 }
 ```
 
@@ -115,8 +126,8 @@ Response
 Response
 ```
 [{
-	"id": "number",
-	"name": "string"
+  "id": "number",
+  "name": "string"
 }]
 ```
 
@@ -126,11 +137,11 @@ Response
 Response
 ```
 [{
-	"id": "number",
-	"userId": "number",
-    "categoryId": "number",
-    "date": "2022-10-22T12:28:22.578Z",
-    "costs": "number"
+  "id": "number",
+  "userId": "number",
+  "categoryId": "number",
+  "date": "2022-10-22T12:28:22.578Z",
+  "costs": "number"
 }]
 ```
 
@@ -140,10 +151,10 @@ Response
 Response
 ```
 [{
-	"id": "number",
-	"userId": "number",
-    "categoryId": "number",
-    "date": "2022-10-22T12:28:22.578Z",
-    "costs": "number"
+  id": "number",
+  "userId": "number",
+  "categoryId": "number",
+  "date": "2022-10-22T12:28:22.578Z",
+  "costs": "number"
 }]
 ```
