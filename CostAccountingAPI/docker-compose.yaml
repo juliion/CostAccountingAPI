@@ -1,0 +1,13 @@
+﻿version: '3.4'
+
+services:
+  costsaccounting:
+    image: "costsacconting:latest"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: cost
+    ports:
+      - "8000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
