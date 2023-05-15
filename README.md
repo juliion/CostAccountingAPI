@@ -1,8 +1,6 @@
 # CostAccountingAPI
 Cost accounting REST API
 
-Deployed project: https://costaccountingapi.herokuapp.com/
-
 ## Installing .NET6.0
 
 **Windows**
@@ -70,7 +68,7 @@ or
 ## Functionality
 
 ### 1. Сreate user
-**POST** https://costaccountingapi.herokuapp.com/Costs/CreateUser
+**POST** https://{{baseUrl}}/Costs/CreateUser
 ```
 {
   "id": "number", 
@@ -86,7 +84,7 @@ Response
 ```
 
 ### 2. Сreate category
-**POST** https://costaccountingapi.herokuapp.com/Costs/CreateCategory
+**POST** https://{{baseUrl}}/Costs/CreateCategory
 ```
 {
   "id": "number", 
@@ -102,7 +100,7 @@ Response
 ```
 
 ### 3. Сreate record
-**POST** https://costaccountingapi.herokuapp.com/Costs/CreateRecord
+**POST** https://{{baseUrl}}/Costs/CreateRecord
 ```
 {
   "id": "number",
@@ -121,7 +119,7 @@ Response
 ```
 
 ### 4. Get a list of categories
-**GET** https://costaccountingapi.herokuapp.com/Costs/GetCategories
+**GET** https://{{baseUrl}}/Costs/GetCategories
 
 Response
 ```
@@ -132,7 +130,7 @@ Response
 ```
 
 ### 5. Get list of records by user
-**GET** https://costaccountingapi.herokuapp.com/Costs/GetRecordsByUser?userId=1
+**GET** https://{{baseUrl}}/Costs/GetRecordsByUser?userId=1
 
 Response
 ```
@@ -146,7 +144,7 @@ Response
 ```
 
 ### 6. Get list of records by user and category
-**GET** https://costaccountingapi.herokuapp.com/Costs/GetRecordsByUserAndCategory?userId=2&categoryId=2
+**GET** https://{{baseUrl}}/Costs/GetRecordsByUserAndCategory?userId=2&categoryId=2
 
 Response
 ```
